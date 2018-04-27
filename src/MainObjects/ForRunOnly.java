@@ -23,16 +23,18 @@ public class ForRunOnly {
 		medicDefault.healScore = 5;
 		medicDefault.repair = 2;
 		medicDefault.successLevel = 2;
+
 //		Spec.showSpecMember(medic);
 
 
 
 
 		String nameMedic = myPane.showInputDialog("Введите имя медика экипажа");
-		myPane.showMessageDialog (null,null,"Команда принята",1);
-//		Crew.getName (commander,nameCommander)
-//		System.out.println("");
-		Crew.getSpec("медик");
+		myPane.showMessageDialog (null,"Команда принята","Успешно!",1);
+		medicDefault.memberName = nameMedic;
+
+		Crew.showCrewMember(medicDefault);
+
 	}
 
 

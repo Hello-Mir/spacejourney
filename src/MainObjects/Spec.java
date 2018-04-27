@@ -9,5 +9,6 @@ public class Spec {
     static int healScore;
     static int repair;
     static int successLevel;
+    static String memberName;
 
 }
