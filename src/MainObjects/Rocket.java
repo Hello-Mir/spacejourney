@@ -9,7 +9,7 @@ public class Rocket {
 		this.name = name;
 	}
 	
- public static void lounch (String command) {
+ public static void launch (String command) {
 	 String s = command;
 	 if (s.equals("К взлету готов") || s.equals("Подтверждаю готовность")) {
 		 System.out.print("Начинаем обратный отсчет до старта маршевых двигателей: ");
