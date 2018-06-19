@@ -13,14 +13,14 @@ public class Crew {
 
    
     public static void showCrewMember(Spec spec, String putHereAName) {
-        System.out.println("Характеристики члена экипажа: " + Spec.spec + ".");
-        System.out.println("Имя,записанное в бортовой журнал: " + putHereAName + "." + " " + "Специальность по бортовому журналу: " + Spec.spec + ".");
-        System.out.println("Силовые показатели: "  + Spec.strength + ".");
-        System.out.println("Показатели ловкости: " + Spec.agility + ".");
-        System.out.println("Коэффициент интеллекта: " + Spec.intelligence + ".");
-        System.out.println("Навыки первой помощи: " + Spec.healScore + ".");
-        System.out.println("Навыки ремонта: " + Spec.repair + ".");
-        System.out.println("Степень удачливости и принятия верных решений: " + Spec.successLevel + ".");
+        System.out.println("Р’С‹Р±СЂР°РЅР° Р·Р°РїРёСЃСЊ РёР· Р±РѕСЂС‚РѕРІРѕРіРѕ Р¶СѓСЂРЅР°Р»Р°: " + Spec.spec + ".");
+        System.out.println("Р—Р°РїРёСЃСЊ РїРѕ РёРјРµРЅРё: " + putHereAName + "." + " " + "РЎРѕ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊСЋ: " + Spec.spec + ".");
+        System.out.println("РћС‡РєРё СЃРёР»С‹ "  + Spec.strength + ".");
+        System.out.println("РћС‡РєРё Р»РѕРІРєРѕСЃС‚Рё: " + Spec.agility + ".");
+        System.out.println("РљРѕСЌС„С„РёС†РёРµРЅС‚ РёРЅС‚РµР»Р»РµРєС‚Р°: " + Spec.intelligence + ".");
+        System.out.println("РћС‡РєРё РїРµСЂРІРѕР№ РїРѕРјРѕС‰Рё: " + Spec.healScore + ".");
+        System.out.println("РЎРїРѕСЃРѕР±РЅРѕСЃС‚Рё СЂРµРјРѕРЅС‚Р°: " + Spec.repair + ".");
+        System.out.println("РћС‡РєРё Р»РёРґРµСЂСЃС‚РІР°: " + Spec.successLevel + ".");
 
     }
 
@@ -30,12 +30,12 @@ public class Crew {
     }
 
     public static String setName (){
-        String someName = JOptionPane.showInputDialog("Введите имя");
+        String someName = JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РёРјСЏ");
 	while (someName == null || someName.equals("")){
-	    JOptionPane.showMessageDialog(null,"Неуспешно, имя не введено!", "Повторите, пожалуйста", 1);
-	    someName = JOptionPane.showInputDialog("Введите имя");
+	    JOptionPane.showMessageDialog(null,"Р—РЅР°С‡РµРЅРёРµ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РёР»Рё РїРµСЂРµРґР°РЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ!", "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРІС‚РѕСЂРёС‚Рµ", 1);
+	    someName = JOptionPane.showInputDialog("Р—РЅР°С‡РµРЅРёРµ РїСЂРёРЅСЏС‚Рѕ");
 	}
-	JOptionPane.showMessageDialog(null,"Имя: "+ someName+ " записано в бортовой журнал!" ,"Успешно",1);
+	JOptionPane.showMessageDialog(null,"РРјСЏ: "+ someName+ " Р—Р°РїРёСЃР°РЅРѕ РІ Р±РѕСЂС‚РѕРІРѕР№ Р¶СѓСЂРЅР°Р»!" ,"РЎРїР°СЃРёР±Рѕ",1);
         return someName;
     }
 

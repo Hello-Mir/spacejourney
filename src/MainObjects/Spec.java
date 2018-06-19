@@ -12,7 +12,7 @@ public class Spec {
     static String memberName;
 
     public static void medicDefaults (){
-        spec = "медик";
+        spec = "medic";
         agility = 2;
         strength =2;
         intelligence = 4;
@@ -22,7 +22,7 @@ public class Spec {
     }
 
     public static void commanderDefaults() {
-        spec = "командир экипажа";
+        spec = "РєРѕРјР°РЅРґРёСЂ СЌРєРёРїР°Р¶Р°";
         agility = 2;
         strength = 2 ;
         intelligence  = 5;
@@ -31,7 +31,7 @@ public class Spec {
         successLevel = 3;
     }
     public static void mechanickDefaults () {
-        spec = "бортмеханик";
+        spec = "РјРµС…Р°РЅРёРє";
         agility = 2;
         strength = 4;
         intelligence = 2;
@@ -40,7 +40,7 @@ public class Spec {
         successLevel = 2;
     }
     public static void scientistDefaults () {
-        spec = "научный сотрудник";
+        spec = "РЅР°СѓС‡РЅС‹Р№ СЂР°Р±РѕС‚РЅРёРє";
         agility = 1;
         strength = 1;
         intelligence = 5;

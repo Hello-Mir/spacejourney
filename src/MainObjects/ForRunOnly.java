@@ -9,11 +9,11 @@ public class ForRunOnly {
 	public static void main(String[] args) {
 
 
-//		Rocket myRocket = new Rocket ("Vulture");
-//		System.out.println (myRocket.name);
+		Rocket myRocket = new Rocket ("\"Тысячелетний сокол\"");
+		System.out.println ("Имя корабля " + myRocket.name);
 		
-//		Rocket.launch("не та команда");
-		JOptionPane myPane = new JOptionPane ();
+		Rocket.launch("Все в норме");
+//		JOptionPane myPane = new JOptionPane ();
 
 //		Spec medicDefault = new Spec ();
 //		medicDefault.spec = "медик";
@@ -30,11 +30,11 @@ public class ForRunOnly {
 
 
 
-		String nameMedic = myPane.showInputDialog("Введите имя медика экипажа");
-		myPane.showMessageDialog (null,"Имя введено. Есть запись в бортовом журнале!","Успешно",1);
-		medicDefault.memberName = nameMedic;
-
-		Crew.showCrewMember(medicDefault,nameMedic);
+//		String nameMedic = myPane.showInputDialog("Введите имя медика экипажа");
+//		myPane.showMessageDialog (null,"Имя введено. Есть запись в бортовом журнале!","Успешно",1);
+//		medicDefault.memberName = nameMedic;
+//
+//		Crew.showCrewMember(medicDefault,nameMedic);
 
 //		System.out.println(Crew.setName());
 //		Spec mechanickDefault = new Spec();
