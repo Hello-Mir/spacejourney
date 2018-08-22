@@ -1,7 +1,5 @@
 package MainObjects;
 
-import javax.swing.*;
-
 public class ForRunOnly {
 
 
