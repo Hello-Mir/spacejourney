@@ -1,7 +1,11 @@
 package MainObjects;
 
 public class Spec {
-	
+
+    /*
+    В этом классе используются не все переменные. В какой-то момент времени создал при какой-то необходимости.
+    Пусть пока будут, глядишь,и понадобятся.
+     */
 	static String spec;
     static int agility;
     static int strength;
@@ -12,7 +16,7 @@ public class Spec {
     static String memberName;
 
     public static void medicDefaults (){
-        spec = "medic";
+        spec = "медик";
         agility = 2;
         strength =2;
         intelligence = 4;

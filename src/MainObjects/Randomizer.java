@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class Randomizer {
     static int random = new Random().nextInt(40) + 0;
-    private String x = "ясно";
+    private String x;
     //надо допилить еще условие на вывод
 
     //ясная погода
-    //штормовая погода
-    //пасмурно,ошибки в навигации
-    //облачно
+    //штормовая погода (повреждение корпуса, нужна починка, механик устает = понижение доступных очков ремонта)
+    //пасмурно (приводит к ошибкам в навигации)
+    //облачно (хз что, надо придумать)
 
 
     public static String weatherGenerate(int random) {

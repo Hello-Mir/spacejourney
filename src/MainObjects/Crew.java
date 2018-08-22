@@ -1,41 +1,36 @@
 package MainObjects;
 
-import javax.swing.* ;
+
 public class Crew {
 
-	static String crewMemberspec;
-//	String Engeenierspec;
-//	String scientistspec;
-//	String medicspec;
+    /*
+    На этот класс были планы, но ничего пока полезного не сделано.
+    Вообще, специальности - класс Spec - можно было занести в этот класс:логично что у экипажа могут быть специальности.
+    Так что можно было отредактировать...
+
+     */
+
+    //чтобы записать что-то в TODO (типа, надо сделать), просто набрать TODO или TODO и Tab (или Enter);
 
 
+    public static void showCrewMember(String spec, String putHereAName) {
 
-   
-    public static void showCrewMember(Spec spec, String putHereAName) {
-        System.out.println("Выбрана запись из бортового журнала: " + Spec.spec + ".");
-        System.out.println("Запись по имени: " + putHereAName + "." + " " + "Со специальностью: " + Spec.spec + ".");
-        System.out.println("Очки силы "  + Spec.strength + ".");
+        /*
+        в этом методе выводится инфа по специальности, которая указана в атрибутах: они указаны в скобках метода, и по имени.
+        Задумка была как выводить инфу из "бортового журнала".
+        Вообще, бортовой журнал было бы мудрее сделать в виде таблицы SQL.
+        И каждый раз, когда пользователь обращается в журнал, представлять записи из баз данных. Над этим можно поработать.
+         */
+
+        System.out.println("Выбрана запись из бортового журнала: " + spec + ".");
+        System.out.println("Запись по имени: " + putHereAName + "." + " " + "Со специальностью: " + spec + ".");
+        System.out.println("Очки силы " + Spec.strength + ".");
         System.out.println("Очки ловкости: " + Spec.agility + ".");
         System.out.println("Коэффициент интеллекта: " + Spec.intelligence + ".");
         System.out.println("Очки первой помощи: " + Spec.healScore + ".");
         System.out.println("Способности ремонта: " + Spec.repair + ".");
         System.out.println("Очки лидерства: " + Spec.successLevel + ".");
 
-    }
-
-    public static String getSpec(String s) {
-        Spec.spec = s;
-        return Spec.spec;
-    }
-
-    public static String setName (){
-        String someName = JOptionPane.showInputDialog("Введите имя");
-	while (someName == null || someName.equals("")){
-	    JOptionPane.showMessageDialog(null,"Значение отсутствует или передано некорректное значение!", "Пожалуйста, повторите", 1);
-	    someName = JOptionPane.showInputDialog("Значение принято");
-	}
-	JOptionPane.showMessageDialog(null,"Имя: "+ someName+ " Записано в бортовой журнал!" ,"Спасибо",1);
-        return someName;
     }
 
 
