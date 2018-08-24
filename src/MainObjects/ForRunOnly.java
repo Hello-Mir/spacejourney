@@ -17,48 +17,58 @@ public class ForRunOnly {
     public static void main(String[] args) {
 
 
-        JOptionPane myPane = new JOptionPane();//создание фрейма - окна
-        Spec specOne = new Spec(); //создание объекта типа специальность
+//        JOptionPane myPane = new JOptionPane();//создание фрейма - окна
+//        Spec specOne = new Spec(); //создание объекта типа специальность
 
 
 /*
  тут будет выпадающий список,в котором можно будет выбрать специальность члена экипажа.
  А пока просто передача строки со специальностями.
   */
-        specOne.spec = "медик";
-
-
-
-        if (specOne.spec.startsWith("мед")) {
-            nameMedic = myPane.showInputDialog("Введите имя медика экипажа.");
-            // ниже уведомление об успехе и занесение в журнал
-            myPane.showMessageDialog(null, "Имя введено. Запись передана в бортовой журнал!", "Успешно", 1);
-            specOne.memberName = nameMedic;
-            specOne.medicDefaults();
-            Crew.showCrewMember(specOne.spec, nameMedic);
-        }
-
-
-        specOne.spec = "командир экипажа";
-        if (specOne.spec.startsWith("коман")) {
-            nameComander = myPane.showInputDialog("Введите имя командира экипажа.");
-
-            myPane.showMessageDialog(null, "Имя введено. Запись передана в бортовой журнал!", "Успешно", 1);
-            specOne.memberName = nameComander;
-            specOne.commanderDefaults();
-            Crew.showCrewMember(specOne.spec, nameComander);
-        }
-
-
-        specOne.spec = "научный работник";
-        if (specOne.spec.startsWith("борт")) {
-            nameScientist = myPane.showInputDialog("Введите имя научного работника.");
-
-            myPane.showMessageDialog(null, "Имя введено. Запись передана в бортовой журнал!", "Успешно", 1);
-            specOne.memberName = nameScientist;
-            specOne.scientistDefaults();
-            Crew.showCrewMember(specOne.spec, nameScientist);
-        }
+//        specOne.spec = "медик";
+//
+//
+//
+//        if (specOne.spec.startsWith("мед")) {
+//            nameMedic = myPane.showInputDialog("Введите имя медика экипажа.");
+//            // ниже уведомление об успехе и занесение в журнал
+//            myPane.showMessageDialog(null, "Имя введено. Запись передана в бортовой журнал!", "Успешно", 1);
+//            specOne.memberName = nameMedic;
+//            specOne.medicDefaults();
+//            Crew.showCrewMember(specOne.spec, nameMedic);
+//
+//
+//            if (nameMedic == null && nameMedic == "") {
+//                nameMedic = myPane.showInputDialog("Имя не указано. Введите имя медика экипажа.");
+//                myPane.showMessageDialog(null, "Имя введено. Запись передана в бортовой журнал!", "Успешно", 1);
+//                specOne.medicDefaults();
+//                Crew.showCrewMember(specOne.spec, nameMedic);
+//            }
+//
+//
+//        }
+//
+//
+//        specOne.spec = "командир экипажа";
+//        if (specOne.spec.startsWith("коман")) {
+//            nameComander = myPane.showInputDialog("Введите имя командира экипажа.");
+//
+//            myPane.showMessageDialog(null, "Имя введено. Запись передана в бортовой журнал!", "Успешно", 1);
+//            specOne.memberName = nameComander;
+//            specOne.commanderDefaults();
+//            Crew.showCrewMember(specOne.spec, nameComander);
+//        }
+//
+//
+//        specOne.spec = "научный работник";
+//        if (specOne.spec.startsWith("борт")) {
+//            nameScientist = myPane.showInputDialog("Введите имя научного работника.");
+//
+//            myPane.showMessageDialog(null, "Имя введено. Запись передана в бортовой журнал!", "Успешно", 1);
+//            specOne.memberName = nameScientist;
+//            specOne.scientistDefaults();
+//            Crew.showCrewMember(specOne.spec, nameScientist);
+//        }
 
         /*
         Здесь закончен этап получения имен и определения их базовых навыков.
@@ -76,6 +86,11 @@ public class ForRunOnly {
         // - провести опыты/ отразить нападение/ пережить эпидемию
         // - долетеь домой
 
+
+        System.out.println (Randomizer.random);
+        System.out.println (Randomizer.weatherGenerate(Randomizer.random));
+
+        Rocket.launch("Поехали");
     }
 }
 
