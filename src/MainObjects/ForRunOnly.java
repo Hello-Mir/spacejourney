@@ -14,7 +14,7 @@ public class ForRunOnly {
     static String nameScientist;
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 
 //        JOptionPane myPane = new JOptionPane();//создание фрейма - окна
@@ -90,7 +90,7 @@ public class ForRunOnly {
         System.out.println (Randomizer.random);
         System.out.println (Randomizer.weatherGenerate(Randomizer.random));
 
-        Rocket.launch("Поехали");
+        Rocket.launch();
     }
 }
 

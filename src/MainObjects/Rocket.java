@@ -1,5 +1,7 @@
 package MainObjects;
 
+import javax.swing.*;
+
 public class Rocket {
 	/*
 	Этот класс необходим при каждом взлете корабля.
@@ -12,26 +14,34 @@ public class Rocket {
 
 
     String name;
+  static String command;
 
     Rocket(String name) {
 
         this.name = name;
+
     }
 
-    public static void launch(String command) {
-        String s = command;
-        if (s.equals("Экипаж к запуску готов") || s.equals("Все в норме")) {
-            System.out.print("Внимание: системы в норме. Ключ на старт. Начинаю обратный отсчет!");
-            for (int i = 10; i > 0; i--) {
+    public static void launch() throws Exception {
+        try {
+            do
+                command = JOptionPane.showInputDialog("Введите команду для взлета.");
+
+            while (!"Экипаж к запуску готов".equals(command) && "Все в норме".equals(command) && command == null);
+
+
+            System.out.println("Внимание: системы в норме. Ключ на старт. Начинаю обратный отсчет!");
+            for (int i = 10; i > 1; i--) {
                 System.out.print(i + ",");
             }
-            System.out.print(".");
-            System.out.print("Зажигание! Ключ на дренаж. Пуск!");
-
-        } else {
-            System.out.println("Команда не распознана. Ожидание корректной команды.");
+            System.out.println("1.");
+            System.out.println("Зажигание! Ключ на дренаж. Пуск!");
         }
-
-
+        catch (Exception e) {
+            System.out.println("Возникла ошибка: " + e);
+            System.out.println("Команда будет перезапрошена!");
+        }
     }
+
 }
+
