@@ -14,7 +14,7 @@ public class Rocket {
 
 
     String name;
-  static String command;
+    static String command;
 
     Rocket(String name) {
 
@@ -22,14 +22,10 @@ public class Rocket {
 
     }
 
-    public static void launch() throws Exception {
-        try {
-            do
-                command = JOptionPane.showInputDialog("Введите команду для взлета.");
+    public static void launch() {
+        command = JOptionPane.showInputDialog("Введите команду для взлета.");
 
-            while (!"Экипаж к запуску готов".equals(command) && "Все в норме".equals(command) && command == null);
-
-
+        if ("Экипаж к запуску готов".equalsIgnoreCase(command) || "Все в норме".equalsIgnoreCase(command) && command != null && !"".equals(command)) {
             System.out.println("Внимание: системы в норме. Ключ на старт. Начинаю обратный отсчет!");
             for (int i = 10; i > 1; i--) {
                 System.out.print(i + ",");
@@ -37,11 +33,26 @@ public class Rocket {
             System.out.println("1.");
             System.out.println("Зажигание! Ключ на дренаж. Пуск!");
         }
-        catch (Exception e) {
-            System.out.println("Возникла ошибка: " + e);
-            System.out.println("Команда будет перезапрошена!");
-        }
-    }
 
+//TODO добавить условие на отмену старт
+
+
+        while ((!"Экипаж к запуску готов".equalsIgnoreCase(command) || !"Все в норме".equalsIgnoreCase(command)) || (command == null || !"".equals(command))) {
+            command = JOptionPane.showInputDialog("Команда не введена. Или введена неверно.Повторите для старта!");
+
+            if ("Экипаж к запуску готов".equalsIgnoreCase(command) || "Все в норме".equalsIgnoreCase(command) || command != null & !"".equals(command)) {
+                System.out.println("Внимание: системы в норме. Ключ на старт. Начинаю обратный отсчет!");
+                for (int i = 10; i > 1; i--) {
+                    System.out.print(i + ",");
+                }
+                System.out.println("1.");
+                System.out.println("Зажигание! Ключ на дренаж. Пуск!");
+            }
+
+
+        }
+
+
+    }
 }
 
